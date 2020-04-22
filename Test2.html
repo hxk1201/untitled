@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示时间2</title>
+</head>
+<body>
+    <div id="dic"></div>
+    <script type="text/javascript">
+        function nowDate()
+        {
+            var nowDate = new Date();
+            var year = nowDate.getFullYear();
+            var month = nowDate.getMonth() + 1 < 10 ? "0" + (nowDate.getMonth() + 1)
+                : nowDate.getMonth() + 1;
+            var day = nowDate.getDate() < 10 ? "0" + nowDate.getDate() : nowDate
+                .getDate();
+            var datew = year + "-" + month + "-" + day;
+            document.getElementById("dic").innerHTML=datew;
+        }
+        setInterval("nowDate(),1000");
+    </script>
+
+</body>
+</html>

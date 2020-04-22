@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script type="text/javascript">
+        //获取当天日期
+        function date()
+        {
+            var date=new Date();
+            var year=date.getFullYear();
+            var month=date.getMonth()+1;
+            var day=date.getDate();
+            var datestr = year+"-"+month+"-"+day; //时间是一个STRING类型 需要一个存放的地址
+            //document.getElementById("demo").innerHTML=datestr;
+            alert("当前日期"+datestr);
+        }
+    </script>
+<body>
+
+<h1>我的第一个 JavaScript 程序</h1>
+<p id="demo">这是一个段落</p>
+<button type="button" onclick ="date()">显示日期</button>
+<!--<<button type="button" onclick="date()">显示日期</button>
+	-->
+
+</body>
+</html>

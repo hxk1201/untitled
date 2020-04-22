@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //获取当天日期
+        function date()
+        {
+
+            var strTime="2011-04-16"; //字符串日期格式
+            var adate= new Date(Date.parse(strTime.replace(/-/g,   "/"))); //转换成Data();
+
+            var month=date.getMonth()+1;
+
+            var date=new Date();
+            var nowmonth=date.getMonth()+1;
+            var nowday=date.getDate();
+            var nowdatestr = nowmonth+"-"+nowday; //时间是一个STRING类型 需要一个存放的地址
+            //document.getElementById("demo").innerHTML=datestr;
+
+            var differday = nowdatestr-adate;
+
+            alert("距离时间"+adate+"天");
+        }
+    </script>
+</head>
+<body>
+
+    <h1>我的第一个 JavaScript 程序</h1>
+    <p id="demo">这是一个段落</p>
+    <button type="button" onclick ="date()">显示日期</button>
+
+</body>
+</html>
